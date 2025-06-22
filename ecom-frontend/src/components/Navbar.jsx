@@ -107,8 +107,8 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
       <header>
         <nav className="navbar navbar-expand-lg fixed-top">
           <div className="container-fluid">
-            <a className="navbar-brand" href="https://telusko.com/">
-              KStore
+            <a className="navbar-brand" href="https://github.com/kalleshhu/">
+              <img src="/assets/ecommerce-logo.png" alt="KStore" />
             </a>
             <button
               className="navbar-toggler"
