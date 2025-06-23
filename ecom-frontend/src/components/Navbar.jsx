@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Home from "./Home"
 import axios from "axios";
+import logo from '../assets/ecommerce-logo.png';
 // import { json } from "react-router-dom";
 // import { BiSunFill, BiMoon } from "react-icons/bi";
 
@@ -107,9 +108,10 @@ const Navbar = ({ onSelectCategory, onSearch }) => {
       <header>
         <nav className="navbar navbar-expand-lg fixed-top">
           <div className="container-fluid">
-            <a className="navbar-brand" href="https://github.com/kalleshhu/">
-              <img src="/assets/ecommerce-logo.png" alt="KStore" />
-            </a>
+<a className="navbar-brand" href="https://github.com/kalleshhu/" target="blank">
+  <img style={{height:"50px", width:"150px"}} src={logo} alt="KStore" />
+</a>
+
             <button
               className="navbar-toggler"
               type="button"
