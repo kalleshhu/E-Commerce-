@@ -1,0 +1,7 @@
+.left-column-img {
+     transition: transform 0.3s ease;
+}
+
+.left-column-img:hover {
+    transform: scale(1.3);
+}

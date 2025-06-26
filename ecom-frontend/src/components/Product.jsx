@@ -1,9 +1,11 @@
+import "./Product.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
 import AppContext from "../Context/Context";
 import axios from "../axios";
 import UpdateProduct from "./UpdateProduct";
+
 const Product = () => {
   const { id } = useParams();
   const { data, addToCart, removeFromCart, cart, refreshData } =
@@ -66,6 +68,8 @@ const Product = () => {
       </h2>
     );
   }
+
+  
   return (
     <>
       <div className="containers" style={{ display: "flex" }}>
@@ -73,13 +77,13 @@ const Product = () => {
           className="left-column-img"
           src={imageUrl}
           alt={product.imageName}
-          style={{ width: "50%", height: "auto" }}
+          style={{ width: "50%", height: "auto"}}
         />
 
         <div className="right-column" style={{ width: "50%" }}>
           <div className="product-description">
             <div style={{display:'flex',justifyContent:'space-between' }}>
-            <span style={{ fontSize: "1.2rem", fontWeight: 'lighter' }}>
+            <span style={{ fontSize: "1.2rem", fontWeight: "normal" }}>
               {product.category}
             </span>
             <p className="release-date" style={{ marginBottom: "2rem" }}>
@@ -100,7 +104,8 @@ const Product = () => {
 
           <div className="product-price">
             <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
-              {"$" + product.price}
+              <i className="bi bi-currency-rupee"></i>
+              {product.price}
             </span>
             <button
               className={`cart-btn ${
